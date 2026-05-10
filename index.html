@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UrbanVoice — Tu voz convierte la ciudad en un lugar más seguro</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- Estilos propios -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════
+       NAVBAR
+  ═══════════════════════════════════ -->
+  <nav id="navbar">
+    <a href="#" class="nav-logo">
+      <div class="nav-logo-icon">
+        <i class="fa-solid fa-shield-halved"></i>
+      </div>
+      <span class="nav-logo-text">UrbanVoice</span>
+    </a>
+
+    <ul class="nav-links">
+      <li><a href="#features">Producto</a></li>
+      <li><a href="#aliados">Aliados</a></li>
+    </ul>
+
+    <div class="nav-actions">
+      <a href="#" class="btn-nav-primary">
+        <i class="fa-solid fa-arrow-down"></i> Descargar
+      </a>
+    </div>
+  </nav>
+
+
+  <!-- ═══════════════════════════════════
+       HERO
+  ═══════════════════════════════════ -->
+  <section id="hero">
+    <div class="hero-bg-overlay"></div>
+    <div class="hero-grid-lines"></div>
+
+    <div class="hero-inner">
+
+      <!-- Columna izquierda: contenido -->
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="hero-badge-dot"></span>
+          Red activa en Lima Metropolitana
+        </div>
+
+        <h1 class="hero-title">
+          Tu voz convierte la ciudad en un lugar <span>más seguro.</span>
+        </h1>
+
+        <p class="hero-desc">
+          UrbanVoice es la red ciudadana de seguridad de Lima. Reportes colaborativos, mapa de zonas de riesgo y alertas geolocalizadas — todo en una sola app.
+        </p>
+
+        <div class="hero-ctas">
+          <a href="#" class="btn-store btn-store-white">
+            <i class="fa-brands fa-apple btn-store-icon"></i>
+            <div>
+              <span class="btn-store-small">Descargar en</span>
+              <span class="btn-store-big">App Store</span>
+            </div>
+          </a>
+          <a href="#" class="btn-store btn-store-outline">
+            <i class="fa-brands fa-google-play btn-store-icon"></i>
+            <div>
+              <span class="btn-store-small">Disponible en</span>
+              <span class="btn-store-big">Google Play</span>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <!-- Columna derecha: mockup del teléfono -->
+      <div class="hero-visual">
+        <div class="phone-mockup-wrap">
+
+          <!-- Tarjetas flotantes -->
+          <div class="phone-float-card float-left">
+            <div class="float-val" id="float-reports">+12</div>
+            <div class="float-lbl">Reportes hoy</div>
+          </div>
+          <div class="phone-float-card float-right">
+            <div class="float-val">🟢 Activo</div>
+            <div class="float-lbl">Serenazgo cercano</div>
+          </div>
+
+          <!-- Frame del teléfono -->
+          <div class="phone-frame">
+            <div class="phone-notch"></div>
+            <div class="phone-screen">
+
+              <!-- Barra de estado -->
+              <div class="phone-status-bar">
+                <span>9:41</span>
+                <div class="phone-status-icons">
+                  <i class="fa-solid fa-signal"></i>
+                  <i class="fa-solid fa-wifi"></i>
+                  <i class="fa-solid fa-battery-three-quarters"></i>
+                </div>
+              </div>
+
+              <!-- Tarjeta de alerta en pantalla -->
+              <div class="phone-alert-card">
+                <div class="phone-alert-icon">
+                  <i class="fa-solid fa-triangle-exclamation"></i>
+                </div>
+                <div>
+                  <div class="phone-alert-title">Alerta cercana — 200 m</div>
+                  <div class="phone-alert-sub">Robo reportado · Hace 4 min</div>
+                </div>
+              </div>
+
+              <!-- Mapa con zonas de calor -->
+              <div class="map-grid"></div>
+              <div class="heatzone hz-red"   id="hz-red"></div>
+              <div class="heatzone hz-orange" id="hz-orange"></div>
+              <div class="heatzone hz-yellow" id="hz-yellow"></div>
+              <div class="map-pin pin-red"></div>
+              <div class="map-pin pin-orange"></div>
+              <div class="map-pin pin-blue"></div>
+
+            </div><!-- /phone-screen -->
+          </div><!-- /phone-frame -->
+
+        </div><!-- /phone-mockup-wrap -->
+      </div><!-- /hero-visual -->
+
+    </div><!-- /hero-inner -->
+  </section>
+
+
+  <!-- ═══════════════════════════════════
+       ALIADOS (antes: Trust Strip)
+  ═══════════════════════════════════ -->
+  <section id="aliados">
+    <div class="aliados-inner">
+      <span class="aliados-label">Trabajamos con</span>
+      <div class="aliados-divider"></div>
+      <div class="aliados-logos">
+        <div class="aliado-logo">
+          <i class="fa-solid fa-fire-flame-curved"></i> Bomberos Voluntarios del Perú
+        </div>
+        <div class="aliado-logo">
+          <i class="fa-solid fa-car-burst"></i> PNP — Policía Nacional
+        </div>
+        <div class="aliado-logo">
+          <i class="fa-solid fa-shield"></i> Serenazgo Metropolitano
+        </div>
+        <div class="aliado-logo">
+          <i class="fa-solid fa-truck-medical"></i> SAMU Lima
+        </div>
+        <div class="aliado-logo">
+          <i class="fa-solid fa-building-columns"></i> Municipalidad de Lima
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════
+       FEATURES — BENTO GRID
+  ═══════════════════════════════════ -->
+  <section id="features">
+    <div class="features-inner">
+
+      <!-- Encabezado de sección -->
+      <div class="section-header reveal">
+        <span class="section-tag">Funcionalidades</span>
+        <h2 class="section-title">Cuatro herramientas que cambian<br>cómo te mueves por la ciudad.</h2>
+        <p class="section-desc">Inteligencia colectiva en tiempo real, alimentada por miles de ciudadanos como tú.</p>
+      </div>
+
+      <!-- Grid de tarjetas -->
+      <div class="bento-grid">
+
+        <!-- Tarjeta 1: Mapa de zonas de riesgo (azul) -->
+        <article class="bento-card card-blue delay-1">
+          <div class="card-icon-wrap">
+            <i class="fa-solid fa-map-location-dot"></i>
+          </div>
+          <h3 class="card-title">Mapa de zonas de riesgo</h3>
+          <p class="card-desc">Rastrea incidentes en tiempo real con capas filtradas por categoría y rango horario.</p>
+          <div class="mini-map">
+            <div class="mini-map-grid"></div>
+            <div class="mini-heat mh-red"></div>
+            <div class="mini-heat mh-orange"></div>
+            <div class="mini-pin mp-red"></div>
+            <div class="mini-pin mp-orange"></div>
+            <div class="incident-count" id="incident-count">⚠ 7 incidentes activos</div>
+          </div>
+        </article>
+
+        <!-- Tarjeta 2: Reporte ciudadano (blanca) -->
+        <article class="bento-card card-white delay-2">
+          <div class="card-icon-wrap">
+            <i class="fa-solid fa-camera"></i>
+          </div>
+          <h3 class="card-title">Reporte ciudadano</h3>
+          <p class="card-desc">Adjunta foto, audio o video del incidente. La comunidad vota para mantener la veracidad.</p>
+          <div class="report-upload-area">
+            <i class="fa-solid fa-cloud-arrow-up"></i>
+            <p>Arrastra archivos aquí o <span>selecciona</span></p>
+          </div>
+          <div class="report-media-btns">
+            <button class="media-btn"><i class="fa-solid fa-camera"></i> Foto</button>
+            <button class="media-btn"><i class="fa-solid fa-microphone"></i> Audio</button>
+            <button class="media-btn"><i class="fa-solid fa-video"></i> Video</button>
+          </div>
+          <div class="report-sent-msg">
+            <i class="fa-solid fa-circle-check"></i> Reporte anónimo enviado · hace 2 min
+          </div>
+        </article>
+
+        <!-- Tarjeta 3: Alertas de proximidad (blanca / roja) -->
+        <article class="bento-card card-alert delay-3">
+          <div class="card-icon-wrap">
+            <i class="fa-solid fa-bell"></i>
+          </div>
+          <h3 class="card-title">Alertas de proximidad</h3>
+          <p class="card-desc">Recibe una notificación cuando hay un incidente cerca. Elige el radio que prefieras.</p>
+          <div class="alert-notification">
+            <div class="alert-icon-big">
+              <i class="fa-solid fa-triangle-exclamation"></i>
+            </div>
+            <div>
+              <div class="alert-notif-title">Alerta activa — 200 m</div>
+              <div class="alert-notif-sub">Robo reportado · San Isidro · Hace 4 min</div>
+            </div>
+          </div>
+          <div class="chip-group">
+            <div class="chip chip-active">100 m</div>
+            <div class="chip chip-blue">500 m</div>
+            <div class="chip chip-blue">1 km</div>
+            <div class="chip chip-blue">2 km</div>
+          </div>
+        </article>
+
+        <!-- Tarjeta 4: Red de confianza (verde) -->
+        <article class="bento-card card-green delay-4">
+          <div class="card-icon-wrap">
+            <i class="fa-solid fa-user-shield"></i>
+          </div>
+          <h3 class="card-title">Red de confianza</h3>
+          <p class="card-desc">Comparte tu ubicación con familia y amigos cuando lo necesites. Tú decides cuándo y con quién.</p>
+          <div class="trust-contacts">
+            <div class="trust-contact">
+              <div class="contact-avatar" style="background:#3B5BFB;">M</div>
+              <div>
+                <div class="contact-name">Mamá</div>
+                <div class="contact-role">Activa ahora · Miraflores</div>
+              </div>
+              <div class="contact-status online"></div>
+            </div>
+            <div class="trust-contact">
+              <div class="contact-avatar" style="background:#8B5CF6;">C</div>
+              <div>
+                <div class="contact-name">Carlos (hermano)</div>
+                <div class="contact-role">Visto hace 15 min</div>
+              </div>
+              <div class="contact-status away"></div>
+            </div>
+            <div class="trust-contact">
+              <div class="contact-avatar" style="background:#0B96B0;">L</div>
+              <div>
+                <div class="contact-name">Laura</div>
+                <div class="contact-role">Activa ahora · San Isidro</div>
+              </div>
+              <div class="contact-status online"></div>
+            </div>
+          </div>
+        </article>
+
+      </div><!-- /bento-grid -->
+    </div><!-- /features-inner -->
+  </section>
+
+
+  <!-- ═══════════════════════════════════
+       CTA BANNER
+  ═══════════════════════════════════ -->
+  <section id="cta-banner">
+    <div class="cta-inner reveal">
+      <div class="cta-badge">
+        <i class="fa-solid fa-rocket"></i> Ya disponible en Lima
+      </div>
+      <h2 class="cta-title">Empieza a proteger<br>tu ciudad hoy.</h2>
+      <p class="cta-desc">Descarga UrbanVoice y únete a la red ciudadana de seguridad de Lima Metropolitana.</p>
+      <div class="cta-btns">
+        <a href="#" class="btn-primary">
+          <i class="fa-brands fa-apple"></i> App Store
+        </a>
+        <a href="#" class="btn-primary btn-green">
+          <i class="fa-brands fa-google-play"></i> Google Play
+        </a>
+        <a href="#" class="btn-secondary">
+          <i class="fa-regular fa-circle-play"></i> Ver demo
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════ -->
+  <footer>
+    <div class="footer-inner">
+
+      <div class="footer-top">
+
+        <!-- Marca -->
+        <div class="footer-brand">
+          <a href="#" class="footer-logo">
+            <div class="nav-logo-icon"><i class="fa-solid fa-shield-halved"></i></div>
+            <span class="footer-brand-name">UrbanVoice</span>
+          </a>
+          <p class="footer-brand-desc">La red ciudadana de seguridad colaborativa para Lima y el Perú.</p>
+          <div class="footer-socials">
+            <a href="#" class="footer-social"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="footer-social"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#" class="footer-social"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" class="footer-social"><i class="fa-brands fa-linkedin-in"></i></a>
+          </div>
+        </div>
+
+        <!-- Links: Producto -->
+        <div class="footer-col">
+          <div class="footer-col-title">Producto</div>
+          <ul class="footer-links">
+            <li><a href="#">Mapa en vivo</a></li>
+            <li><a href="#">Reportar incidente</a></li>
+            <li><a href="#">Alertas</a></li>
+            <li><a href="#">Red de confianza</a></li>
+          </ul>
+        </div>
+
+        <!-- Links: Empresa -->
+        <div class="footer-col">
+          <div class="footer-col-title">Empresa</div>
+          <ul class="footer-links">
+            <li><a href="#">Sobre nosotros</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Alianzas</a></li>
+            <li><a href="#">Prensa</a></li>
+          </ul>
+        </div>
+
+        <!-- Links: Soporte -->
+        <div class="footer-col">
+          <div class="footer-col-title">Soporte</div>
+          <ul class="footer-links">
+            <li><a href="#">Centro de ayuda</a></li>
+            <li><a href="#">Contacto</a></li>
+            <li><a href="#">Comunidad</a></li>
+            <li><a href="#">Estado del servicio</a></li>
+          </ul>
+        </div>
+
+      </div><!-- /footer-top -->
+
+      <div class="footer-bottom">
+        <span>© 2025 UrbanVoice. Todos los derechos reservados.</span>
+        <div class="footer-bottom-links">
+          <a href="#">Privacidad</a>
+          <a href="#">Términos</a>
+          <a href="#">Cookies</a>
+        </div>
+      </div>
+
+    </div><!-- /footer-inner -->
+  </footer>
+
+
+  <!-- Script propio -->
+  <script src="app.js"></script>
+
+</body>
+</html>
