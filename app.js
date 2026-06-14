@@ -19,6 +19,35 @@ window.addEventListener('scroll', () => {
 
 
 /* ── 2. INTERSECTION OBSERVER — aparición suave ─────── */
+/* Mapa real de Lima con OpenStreetMap */
+function createCityMap(elementId, center, zoom) {
+  const element = document.getElementById(elementId);
+
+  if (!element || typeof L === 'undefined') return;
+
+  const map = L.map(element, {
+    center,
+    zoom,
+    zoomControl: false,
+    attributionControl: false,
+    dragging: false,
+    scrollWheelZoom: false,
+    doubleClickZoom: false,
+    boxZoom: false,
+    keyboard: false,
+    touchZoom: false,
+  });
+
+  L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: '&copy; OpenStreetMap contributors',
+  }).addTo(map);
+}
+
+createCityMap('hero-live-map', [-12.097, -77.035], 14);
+createCityMap('feature-live-map', [-12.097, -77.035], 13);
+
+
 const revealEls  = document.querySelectorAll('.reveal');
 const bentoCards = document.querySelectorAll('.bento-card');
 

@@ -13,6 +13,14 @@
   <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
+  <!-- Leaflet para los mapas reales -->
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+    crossorigin=""
+  />
+
   <!-- Estilos propios -->
   <link rel="stylesheet" href="styles.css" />
 </head>
@@ -125,6 +133,12 @@
               </div>
 
               <!-- Mapa con zonas de calor -->
+              <div
+                id="hero-live-map"
+                class="real-map real-map-phone"
+                role="img"
+                aria-label="Mapa real de Miraflores y San Isidro"
+              ></div>
               <div class="map-grid"></div>
               <div class="heatzone hz-red"   id="hz-red"></div>
               <div class="heatzone hz-orange" id="hz-orange"></div>
@@ -132,6 +146,9 @@
               <div class="map-pin pin-red"></div>
               <div class="map-pin pin-orange"></div>
               <div class="map-pin pin-blue"></div>
+              <a class="map-attribution map-attribution-phone" href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">
+                © OpenStreetMap contributors
+              </a>
 
             </div><!-- /phone-screen -->
           </div><!-- /phone-frame -->
@@ -195,12 +212,21 @@
           <h3 class="card-title">Mapa de zonas de riesgo</h3>
           <p class="card-desc">Rastrea incidentes en tiempo real con capas filtradas por categoría y rango horario.</p>
           <div class="mini-map">
+            <div
+              id="feature-live-map"
+              class="real-map real-map-wide"
+              role="img"
+              aria-label="Mapa real de Lima"
+            ></div>
             <div class="mini-map-grid"></div>
             <div class="mini-heat mh-red"></div>
             <div class="mini-heat mh-orange"></div>
             <div class="mini-pin mp-red"></div>
             <div class="mini-pin mp-orange"></div>
             <div class="incident-count" id="incident-count">⚠ 7 incidentes activos</div>
+            <a class="map-attribution" href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">
+              © OpenStreetMap contributors
+            </a>
           </div>
         </article>
 
@@ -386,6 +412,11 @@
 
 
   <!-- Script propio -->
+  <script
+    src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+    crossorigin=""
+  ></script>
   <script src="app.js"></script>
 
 </body>
